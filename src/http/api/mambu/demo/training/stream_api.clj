@@ -1,5 +1,5 @@
 ;; Mambu Streaming APIs from Cloure - Examples
-;; GitHub: https://github.com/mkersh/ClojureTests/tree/master/src/http/api/mambu/demo/training/stream_api.clj
+;; GitHub: https://github.com/mkersh/stream_api/blob/main/src/http/api/mambu/demo/training/stream_api.clj
 ;; See Also the more official Mambu Java streaming client:
 ;;     https://github.com/mambu-gmbh/Streaming-API-Java-Sample-Client/blob/master/src/main/java/streamingapi/client/StreamingApiClient.java
 ;;
@@ -8,7 +8,6 @@
 (ns http.api.mambu.demo.training.stream_api
   (:require [http.api.json_helper :as api]
             [http.api.api_pipe :as steps]
-            [http.ENV :as env]
             [clojure.data.json :as json]
             [clojure.pprint :as pp]
             [clojure.java.io]
