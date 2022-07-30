@@ -349,7 +349,7 @@
 
 ;; Support the expansion of placeholder in URLs 
 ;; e.g "{{*env*}}/branches" which will have the {{*env*}} placeholders replaced
-(defn- expandURL [url]
+(defn expandURL [url]
   (let [placeholderRegExp #"\{\{[^\}]*\}\}"
         placeholderList (re-seq placeholderRegExp url)
         placeholderSet (set placeholderList)]
