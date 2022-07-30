@@ -181,7 +181,7 @@
 ;; Following sets up the tenant to use
 ;; 2 envs needed: ENV1 identifies the streaming-API , ENV2 identifies the Mambu-core (which is linked to ENV1)
 (defonce ENV1 (atom "env8")) ;; set to a streaming-api api-consumer in your http.ENV
-(defonce ENV2 (atom "env6")) ;; set to a mambu-api api-consumer in your http.ENV, for same tenant a ENV1
+(defonce ENV2 (atom "env6")) ;; set to a mambu-api api-consumer in your http.ENV, for same tenant as ENV1
 
 ;; Identify the streaming-api Topic to monitor 
 ;; NOTE: Change this if you are not using the standard europeshowcase.sandbox.mambu.com demo
