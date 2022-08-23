@@ -49,3 +49,4 @@ heapdump.*
 javacore.*
 Snap.*
 .openvscode-server/*
+.bash_history

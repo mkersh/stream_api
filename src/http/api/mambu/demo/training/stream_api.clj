@@ -47,7 +47,7 @@
   {:url "{{*env*}}/v1/subscriptions"
    :method api/POST
    :query-params {"size" "10"}
-   :body   {"owning_application" "demo-app"
+   :body   {"owning_application" (or (:owning_application context) "demo-app")
             "event_types" (:topic-list context)}
    :headers {"Content-Type" "application/json"}})
 
@@ -206,7 +206,7 @@
   ;; This next function will create a new subscription for mrn.event.europeshowcase.streamingapi.client_activity
   ;; If one already exists it will return the same
   ;; NOTE: For testing run and then copy into subscriptionid def above (if it differs)
-  (call-api create-subscription-api {:topic-list [@TOPIC]} [:last-call "id"] SUBSCRIPTIONID)
+  (call-api create-subscription-api {:topic-list [@TOPIC] :owning_application "demo-app"} [:last-call "id"] SUBSCRIPTIONID) 
   @SUBSCRIPTIONID ;; This will be updated after calling create-subscription-api above
 
   ;; Next function will delete the subscription for mrn.event.europeshowcase.streamingapi.client_activity
