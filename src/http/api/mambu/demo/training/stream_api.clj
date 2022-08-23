@@ -225,7 +225,7 @@
   ;;    batch_limit=n : Controls how many events to batch together under a single cursor
   ;;    stream_keep_alive_limit=n : How long to keep the stream alive with empty keep-alives.
   ;;       
-  (consume-sse-stream)
+  (consume-sse-stream) 
 
   ;; [4] Call next function to stop consume-sse-stream
   ;; NOTE: May take a little time. When complete you will see output "Stopping stream consumption" 

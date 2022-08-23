@@ -48,3 +48,4 @@ resources-dev/public/folder1/t2.txt
 heapdump.*
 javacore.*
 Snap.*
+.openvscode-server/*
