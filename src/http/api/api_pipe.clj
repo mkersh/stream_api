@@ -111,7 +111,8 @@
     (if (:show-only context)
       (do (prn "DEBUG:")
           (pp/pprint request0))
-      (api-method url request1))))
+      (if api-method (api-method url request1)
+          request0))))
 
 (defn process-filter [filterFn context step]
   (if (vector? filterFn)
@@ -196,8 +197,11 @@
          val (get res attr-to-return)]
      val))
   ([api context]
-   (let  [res (apply-api api context)]
-     (:last-call res))))
+   (let  [res (apply-api api context)
+          last-call (:last-call res)
+          errors (get last-call "errors")
+          _ (assert (not errors) (str "ERROR: call-api " last-call))]
+     last-call)))
 
 
 (comment

@@ -50,3 +50,4 @@ javacore.*
 Snap.*
 .openvscode-server/*
 .bash_history
+.lein/*
